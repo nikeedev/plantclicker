@@ -1,0 +1,12 @@
+#btn {
+    max-width:100%;
+    height:auto;
+    size: 300;
+}
+
+html {
+    background-color: rgb(100, 253, 100);
+}
+p {
+    size: 50px;
+}
