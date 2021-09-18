@@ -1,2 +1,2 @@
-# plantclicker #game
+# Plantclicker #game
 The real clicker.
