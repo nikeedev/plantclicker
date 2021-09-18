@@ -1,11 +1,16 @@
 
-var score = 0;
+let score = 0;
 
-var cursorCost = 15;
-var cursors = 0;
+let cursorCost = 15;
+let cursors = 0;
 
-var gardenerCost = 35;
-var gardeners = 0;
+let gardenerCost = 35;
+let gardeners = 0;
+
+
+
+
+
 
 function buyCursor() {
 	if (score >= cursorCost) {
@@ -13,11 +18,15 @@ function buyCursor() {
 		cursors = cursors + 1;
 		cursorCost = Math.round(cursorCost * 1.15);
 
+		
+
 		document.getElementById("score").innerHTML = score;
 		document.getElementById("cursorcost").innerHTML = cursorCost;
 		document.getElementById("cursors").innerHTML = cursors;
 	}
 }
+
+
 
 function buyGardener() {
 	if (score >= gardenerCost) {
@@ -33,6 +42,7 @@ function buyGardener() {
 
 document.getElementById("btn").onclick = function () {
 	score += 1;
+	
 	document.getElementById("score").innerHTML = score;
 }
 
@@ -40,5 +50,9 @@ document.getElementById("btn").onclick = function () {
 setInterval(function() {
 	score = score + cursors;
 	score = score + gardeners * 5;
+	
 	document.getElementById("score").innerHTML = score;
 }, 1500);
+
+
+
