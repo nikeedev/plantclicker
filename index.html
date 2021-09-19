@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="pic.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Clicker</title>
 </head>
 <body>
 	<center>
 	<center>
 		<p>
-			Your click score are:
+			Plants you have:
 		</p>
-		<strong><p id="score">0</p></strong>
+		<strong><p id="plants">0</p></strong>
 		
 				
 	</center>
@@ -21,10 +21,17 @@
 			<img src="pic.png" id="btn"></img>
 		</center>
 
-	<button onclick="buyCursor()">Buy Cursor [<span id="cursorcost">15</span>] -- <span id="cursors">0</span></button>
-	<button onclick="buyGardener()">Buy Gardener [<span id="gardenercost">35</span>] -- <span id="gardeners">0</span></button>
+	
+
+
+	<button onclick="buyCursor()">Buy Cursor [<span id="cursorcost">15</span> Plants] -- <span id="cursors">0</span></button>
+	<button onclick="buyGardener()">Buy Gardener [<span id="gardenercost">50</span> Plants] -- <span id="gardeners">0</span></button>
+	<button onclick="buyFertilizer()">Buy Fertilizer [<span id="fertilizercost">150</span> Plants] -- <span id="fertilizers">0</span></button>
+
+
+	<p id="version">v.0.0.5</p>
 </center>
-				
+	
 </body>
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>

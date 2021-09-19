@@ -10,3 +10,11 @@ html {
 p {
     size: 50px;
 }
+
+#version {
+    position: fixed;
+    bottom: 0px;
+    width: 50%;
+    right: 100px;
+    color: rgb(50, 129, 50);
+}
