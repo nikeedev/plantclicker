@@ -8,7 +8,7 @@ let gardenerCost = 50;
 let gardeners = 0;
 
 let fertilizerCost = 150;
-let fertilizer = 0;
+let fertilizers = 0;
 
 
 function buyCursor() {
@@ -43,12 +43,12 @@ function buyGardener() {
 function buyFertilizer() {
 	if (plants >= fertilizerCost) {
 		plants = plants - fertilizerCost;
-		fertilizer = fertilizer + 1;
+		fertilizers = fertilizers + 1;
 		fertilizerCost = Math.round(fertilizerCost * 1.15);
 
 		document.getElementById("plants").innerHTML = plants;
 		document.getElementById("fertilizercost").innerHTML = fertilizerCost;
-		document.getElementById("fertilizers").innerHTML = gardeners;
+		document.getElementById("fertilizers").innerHTML = fertilizers;
 	}
 }
 
@@ -67,7 +67,7 @@ document.getElementById("btn").onclick = function () {
 setInterval(function() {
 	plants = plants + cursors;
 	plants = plants + gardeners * 5;
-	plants = plants + fertilizer * 13;
+	plants = plants + fertilizers * 13;
 	document.getElementById("plants").innerHTML = plants;
 }, 1500);
 
