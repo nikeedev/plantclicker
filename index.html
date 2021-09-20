@@ -2,37 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<link rel="icon" href="pic.png">
+	<link rel="icon" href="src/pic.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Clicker</title>
 </head>
-<body>
-	<center>
-	<center>
-		<p>
-			Plants you have:
-		</p>
-		<strong><p id="plants">0</p></strong>
-		
-				
-	</center>
-				
+<body>	
+
+<center>
+	<div class="text">
 		<center>
-			<img src="pic.png" id="btn"></img>
+			<p>
+				Plants:
+			</p>
+			<strong><p id="plants">0</p></strong>
+			<span id="scorepersecond"><strong>0</strong></span> plants per second.
+		</center>
+	</div>
+
+
+		<div class="clicker"></div>	
+		<center>
+			<img src="src/pic.png" id="btn"></img>
 		</center>
 
-	
-
+		
+		<h1></h1>
 
 	<button onclick="buyCursor()">Buy Cursor [<span id="cursorcost">15</span> Plants] -- <span id="cursors">0</span></button>
 	<button onclick="buyGardener()">Buy Gardener [<span id="gardenercost">50</span> Plants] -- <span id="gardeners">0</span></button>
 	<button onclick="buyFertilizer()">Buy Fertilizer [<span id="fertilizercost">150</span> Plants] -- <span id="fertilizers">0</span></button>
 
+	<h1></h1>
 
-	<p id="version">v.0.0.5</p>
+	
+	<p id="version">v0.1.0</p>
 </center>
 	
 </body>
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<link rel="stylesheet" href="src/style.css">
+<script src="src/script.js"></script>
 </html>

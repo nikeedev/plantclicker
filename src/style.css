@@ -7,9 +7,7 @@
 html {
     background-color: rgb(100, 253, 100);
 }
-p {
-    size: 50px;
-}
+
 
 #version {
     position: fixed;
@@ -18,3 +16,15 @@ p {
     right: 100px;
     color: rgb(50, 129, 50);
 }
+
+.text {
+    color: rgb(75, 224, 75);
+    size: 50px;
+    background-color: rgb(63, 161, 63);
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    
+}
+
