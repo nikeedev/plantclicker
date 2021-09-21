@@ -1,2 +1,4 @@
 # Plantclicker #game
-The real clicker.
+The real Plant Clicker!
+
+🌱
