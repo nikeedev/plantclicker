@@ -10,7 +10,7 @@ let gardeners = 0;
 let fertilizerCost = 150;
 let fertilizers = 0;
 
-let clickingPower = 2;
+let clickingPower = 1;
 
 
 document.getElementById("btn").onclick = function () {
