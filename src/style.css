@@ -1,11 +1,8 @@
-#btn {
-    max-width:100%;
-    height:auto;
-    size: 300;
-}
+
 
 html {
     background-color: rgb(100, 253, 100);
+    
 }
 
 
@@ -17,14 +14,87 @@ html {
     color: rgb(50, 129, 50);
 }
 
-.text {
-    color: rgb(75, 224, 75);
-    size: 50px;
-    background-color: rgb(63, 161, 63);
+
+#zeros {
+    font-family: 'Atkinson Hyperlegible';
+    font-size: 15px;
+}
+
+.sectionLeft {
+    float: left;
+    width: 80%;
+}
+
+.sectionRight {
+    float: right;
+    width: 20%;
+}
+
+.scoreContainer {
+    background-color: rgb(27, 160, 28);
+    color: rgb(100, 253, 100);
     width: 50%;
     padding: 10px;
     border-radius: 10px;
-    font-weight: bold;
+    font-size: 24;
     
 }
 
+.clickerContainer img {
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+
+.clickerContainer img:hover { transform: scale(1.10); }
+
+.clickerContainer img:active { transform: scale(0.99); }
+
+
+.shopButton {
+    background-color: rgb(65, 180, 65);
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+.shopButton:hover {
+    background-color: rgb(77, 204, 77);
+    transition: all .2s ease-in-out; 
+}
+
+
+.shopButton #image {
+    width: 25%;
+} 
+
+.shopButton img {
+    height: 64px;
+    width: 64px;
+}
+
+.shopButton #nameAndCost p {
+    margin: 0px;
+    width: 60%;
+    color: rgb(100, 255, 100);
+}
+
+.shopButton #nameAndCost p:first-of-type {
+    font-size: 24px;
+}
+
+.shopButton #amount {
+    font-size: 48px;
+    color: rgb(100, 255, 100);
+    font-family: roboto;
+    width: 15%;
+}
+
+
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -6,39 +6,66 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Clicker</title>
 </head>
-<body>	
-
-<center>
-	<div class="text">
+<body>
+	<div class="sectionLeft">
 		<center>
-			<p>
-				Plants:
-			</p>
-			<strong><p id="plants">0</p></strong>
-			<span id="scorepersecond"><strong>0</strong></span> plants per second.
+			<div class="scoreContainer unselectable">
+				<strong><span id="plants">0</span></strong> <span id="zeros">plants</span> <br>
+				<strong><span id="scorepersecond">0</span></strong> <span id="zeros">plants per second. </span>
+			</div>
+			<br>
+			<div class="clickerContainer unselectable">
+				<img src="src/pic.png" id="btn">
+			</div>
 		</center>
 	</div>
-
-
-		<div class="clicker"></div>	
-		<center>
-			<img src="src/pic.png" id="btn"></img>
-		</center>
-
-		
-		<h1></h1>
-
-	<button onclick="buyCursor()">Buy Cursor [<span id="cursorcost">15</span> Plants] -- <span id="cursors">0</span><img src="src/cursor.png"></button>
-	<button onclick="buyGardener()">Buy Gardener [<span id="gardenercost">50</span> Plants] -- <span id="gardeners">0</span></button>
-	<button onclick="buyFertilizer()">Buy Fertilizer [<span id="fertilizercost">150</span> Plants] -- <span id="fertilizers">0</span></button>
-
-	<h1></h1>
-
 	
-	<p id="version">v0.1.0</p>
-</center>
+	<div class="sectionRight">
+		<table class="shopButton unselectable" onclick="buyCursor()">
+			<tr>
+				<td id="image"><img src="src/big_cursor.png"></td>
+				<td id="nameAndCost">
+					<p id="zeros">Cursor</p>
+					<p><span id="cursorcost">15</span> <span id="zeros">plants</span></p> 
+				</td>
+				<td id="amount"><span id="cursors">0</span></td>
+			</tr>
+		
+		</table>
+
+		<table class="shopButton  unselectable" onclick="buyFertilizer()">
+			<tr>
+				<td id="image"><img src="src/big_fertilizer.png"></td>
+				<td id="nameAndCost">
+					<p id="zeros">Fertilizer</p>
+					<p><span id="fertilizercost">50</span> <span id="zeros">plants</span></p> 
+				</td>
+				<td id="amount"><span id="fertilizers">0</span></td>
+			</tr>
+		
+		</table>
+
+		<table class="shopButton unselectable" onclick="buyGardener()">
+			<tr>
+				<td id="image"><img src="src/big_gardener.png"></td>
+				<td id="nameAndCost">
+					<p id="zeros">Gardener</p>
+					<p><span id="gardenercost">150</span> <span id="zeros">plants</span></p> 
+				</td>
+				<td id="amount"><span id="gardeners">0</span></td>
+			</tr>
+		
+		</table>
+
+
+		<h1></h1>
+	</div>
+		
+	<p id="version">v0.1.0 </p>
+	
 	
 </body>
 <link rel="stylesheet" href="src/style.css">
+<link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible' rel='stylesheet'>
 <script src="src/script.js"></script>
 </html>

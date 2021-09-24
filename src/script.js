@@ -4,21 +4,16 @@ let plants = 0;
 let cursorCost = 15;
 let cursors = 0;
 
-let gardenerCost = 50;
+let gardenerCost = 150;
 let gardeners = 0;
 
-let fertilizerCost = 150;
+let fertilizerCost = 50;
 let fertilizers = 0;
 
 let clickingPower = 1;
 
 
-document.getElementById("btn").onclick = function () {
-	plants += clickingPower;
 
-	
-	document.getElementById("plants").innerHTML = plants;
-}
 
 function buyCursor() {
 	if (plants >= cursorCost) {
@@ -65,12 +60,17 @@ function buyFertilizer() {
 }
 
 
+document.getElementById("btn").onclick = function () {
+	plants += clickingPower;
 
+	
+	document.getElementById("plants").innerHTML = plants;
+}
 
 
 
 function updateScorePerSecond() {
-	scorePerSecond = cursors + (gardeners * 5) + (fertilizers * 13);
+	scorePerSecond = cursors + (fertilizers * 5) + (gardeners * 13);
 	document.getElementById("scorepersecond").innerHTML = scorePerSecond;
 }
 
@@ -78,10 +78,10 @@ function updateScorePerSecond() {
 
 setInterval(function() {
 	plants = plants + cursors;
-	plants = plants + gardeners * 5;
-	plants = plants + fertilizers * 13;
+	plants = plants + fertilizers * 5;
+	plants = plants + gardeners * 13;
 	document.getElementById("plants").innerHTML = plants;
 
 
 	document.title = plants + " plants - Plant Clicker";
-}, 1500);
+}, 1000);
