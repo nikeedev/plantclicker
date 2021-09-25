@@ -74,17 +74,33 @@ function updateScorePerSecond() {
 	document.getElementById("scorepersecond").innerHTML = scorePerSecond;
 }
 
-
+/*
 function loadGame() {
 	var savedGame = JSON.parse(localStorage.getItem("gameSave"));
-	if (typeof savedGame.score !== "undefined") plants = savedGame.plants;
-	if (typeof savedGame.score !== "undefined") clickingPower = savedGame.clickingPower;
-	if (typeof savedGame.score !== "undefined") cursorCost = savedGame.cursorCost;
-	if (typeof savedGame.score !== "undefined") cursors = savedGame.cursors;
-	if (typeof savedGame.score !== "undefined") gardenerCost = savedGame.gardenerCost;
-	if (typeof savedGame.score !== "undefined") gardeners = savedGame.gardeners;
-	if (typeof savedGame.score !== "undefined") fertilizerCost = savedGame.fertilizerCost;
-	if (typeof savedGame.score !== "undefined") fertilizers = savedGame.fertilizers;
+	if (typeof savedGame.score !== "undefined") {
+		plants = savedGame.plants; 
+	}
+	if (typeof savedGame.score !== "undefined") {
+		clickingPower = savedGame.clickingPower;
+	}
+	if (typeof savedGame.score !== "undefined") { 
+		cursorCost = savedGame.cursorCost;
+	}
+	if (typeof savedGame.score !== "undefined") {
+		cursors = savedGame.cursors;
+	}
+	if (typeof savedGame.score !== "undefined") {
+		gardenerCost = savedGame.gardenerCost;
+	}
+	if (typeof savedGame.score !== "undefined") {
+		gardeners = savedGame.gardeners;
+	}
+	if (typeof savedGame.score !== "undefined") {
+		fertilizerCost = savedGame.fertilizerCost;
+	}
+	if (typeof savedGame.score !== "undefined") {
+		fertilizers = savedGame.fertilizers;
+	}
 }
 
 window.onload = function() {
@@ -107,7 +123,7 @@ function saveGame() {
 	localStorage.setItem("gameSave", JSON.stringify(gameSave));
 }
 
-
+*/
 
 setInterval(function() {
 	plants = plants + cursors;
@@ -119,8 +135,9 @@ setInterval(function() {
 	document.title = plants + " plants - Plant Clicker";
 }, 1000);
 
+/*
 setInterval(function() {
 	saveGame();
 }, 30000);
-
+*/
 
