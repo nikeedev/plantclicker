@@ -74,33 +74,42 @@ function updateScorePerSecond() {
 	document.getElementById("scorepersecond").innerHTML = scorePerSecond;
 }
 
-/*
+myStorage = window.localStorage;
+
+
 function loadGame() {
-	var savedGame = JSON.parse(localStorage.getItem("gameSave"));
-	if (typeof savedGame.score !== "undefined") {
+	var savedGame = JSON.parse(myStorage.getItem("gameSave"));
+	if (typeof savedGame.plants !== "undefined") {
 		plants = savedGame.plants; 
 	}
-	if (typeof savedGame.score !== "undefined") {
+	if (typeof savedGame.clickingPower !== "undefined") {
 		clickingPower = savedGame.clickingPower;
 	}
-	if (typeof savedGame.score !== "undefined") { 
+	if (typeof savedGame.cursorCost !== "undefined") { 
 		cursorCost = savedGame.cursorCost;
 	}
-	if (typeof savedGame.score !== "undefined") {
+	if (typeof savedGame.cursors !== "undefined") {
 		cursors = savedGame.cursors;
 	}
-	if (typeof savedGame.score !== "undefined") {
+	if (typeof savedGame.gardenerCost !== "undefined") {
 		gardenerCost = savedGame.gardenerCost;
 	}
-	if (typeof savedGame.score !== "undefined") {
+	if (typeof savedGame.gardeners !== "undefined") {
 		gardeners = savedGame.gardeners;
 	}
-	if (typeof savedGame.score !== "undefined") {
+	if (typeof savedGame.fertilizerCost !== "undefined") {
 		fertilizerCost = savedGame.fertilizerCost;
 	}
-	if (typeof savedGame.score !== "undefined") {
+	if (typeof savedGame.fertilizers !== "undefined") {
 		fertilizers = savedGame.fertilizers;
 	}
+	document.getElementById("plants").innerHTML = plants;
+	document.getElementById("cursorcost").innerHTML = cursorCost;
+	document.getElementById("cursors").innerHTML = cursors;
+	document.getElementById("gardenercost").innerHTML = gardenerCost;
+	document.getElementById("gardeners").innerHTML = gardeners;
+	document.getElementById("fertilizercost").innerHTML = fertilizerCost;
+	document.getElementById("fertilizers").innerHTML = fertilizers;
 }
 
 window.onload = function() {
@@ -120,10 +129,10 @@ function saveGame() {
 		fertilizerCost: fertilizerCost,
 		fertilizers: fertilizers
 	};
-	localStorage.setItem("gameSave", JSON.stringify(gameSave));
+	myStorage.setItem("gameSave", JSON.stringify(gameSave));
 }
 
-*/
+
 
 setInterval(function() {
 	plants = plants + cursors;
@@ -135,9 +144,9 @@ setInterval(function() {
 	document.title = plants + " plants - Plant Clicker";
 }, 1000);
 
-/*
+
 setInterval(function() {
 	saveGame();
-}, 30000);
-*/
+}, 500);
+
 
