@@ -133,6 +133,13 @@ function saveGame() {
 }
 
 
+function resetGame() {
+	var gameSave = { };
+	myStorage.setItem("gameSave", JSON.stringify(gameSave));
+	location.reload();
+
+}
+
 
 setInterval(function() {
 	plants = plants + cursors;
