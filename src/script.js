@@ -136,7 +136,15 @@ function saveGame() {
 function resetGame() {
 	var gameSave = { };
 	myStorage.setItem("gameSave", JSON.stringify(gameSave));
+	document.getElementById("plants").innerHTML = plants;
+	document.getElementById("cursorcost").innerHTML = cursorCost;
+	document.getElementById("cursors").innerHTML = cursors;
+	document.getElementById("gardenercost").innerHTML = gardenerCost;
+	document.getElementById("gardeners").innerHTML = gardeners;
+	document.getElementById("fertilizercost").innerHTML = fertilizerCost;
+	document.getElementById("fertilizers").innerHTML = fertilizers;
 	location.reload();
+
 
 }
 
