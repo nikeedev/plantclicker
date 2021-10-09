@@ -11,65 +11,31 @@
 		<center>
 			<div class="scoreContainer">
 				<strong><span id="plants">0</span></strong> <span id="zeros">plants</span> <br>
-				<strong><span id="scorepersecond">0</span></strong> <span id="zeros">plants per second. </span>
+				<strong><span id="plantsPerSecond">0</span></strong> <span id="zeros">plants per second. </span>
 			</div>
 			<br>
 			<div class="clickerContainer">
-				<img src="src/pic.png" id="btn" onclick="Game.addToScore(Game.clickValue)">
+				<img src="src/pic.png" id="btn" onclick="game.addToPlants(game.clickValue)">
 			</div>
 			
 		</center>
 	</div>
 	
-	<div class="sectionRight">
-		<table class="shopButton" onclick="buyCursor()">
-			<tr>
-				<td id="image"><img src="src/big_cursor.png"></td>
-				<td id="nameAndCost">
-					<p id="zeros">Cursor</p>
-					<p><span id="cursorcost">15</span> <span id="zeros">plants</span></p> 
-				</td>
-				<td id="amount"><span id="cursors">0</span></td>
-			</tr>
+	<div class="sectionRight" id="shopContainer">
 		
-		</table>
-
-		<table class="shopButton" onclick="buyFertilizer()">
-			<tr>
-				<td id="image"><img src="src/big_fertilizer.png"></td>
-				<td id="nameAndCost">
-					<p id="zeros">Fertilizer</p>
-					<p><span id="fertilizercost">50</span> <span id="zeros">plants</span></p> 
-				</td>
-				<td id="amount"><span id="fertilizers">0</span></td>
-			</tr>
-		
-		</table>
-
-		<table class="shopButton" onclick="buyGardener()">
-			<tr>
-				<td id="image"><img src="src/big_gardener.png"></td>
-				<td id="nameAndCost">
-					<p id="zeros">Gardener</p>
-					<p><span id="gardenercost">150</span> <span id="zeros">plants</span></p> 
-				</td>
-				<td id="amount"><span id="gardeners">0</span></td>
-			</tr>
-		
-		</table>
 		<h1></h1>
 
 	</div>
 
 
 	
-	<p id="version">Version 0.2.1</p>
+	<p id="version">Version 0.3.0</p>
 	
 	
 	<p id="news">News: In version 0.2.0, game saves your progress automatically!</p>
 
 
-	<button onclick="resetGame()">Delete progress(will ask not again!!!)</button>
+	<button onclick="resetGame()">Delete progress(Will not ask you again to confirm!)</button>
 
 
 </body>
