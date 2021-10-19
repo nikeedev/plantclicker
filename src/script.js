@@ -28,11 +28,11 @@ var game = {
 
 
 var building = {
-	name: ["Cursor", "Fertilizer", "Gardener"],
-	image: ["src/big_cursor.png", "src/big_fertilizer.png", "src/big_gardener.png"],
-	count: [0, 0, 0],
-	income: [1, 5, 13],
-	cost: [15, 50, 150],
+	name: ["Cursor", "Fertilizer", "Gardener", "Farm"],
+	image: ["src/big_cursor.png", "src/big_fertilizer.png", "src/big_gardener.png", "src/big_farm.png"],
+	count: [0, 0, 0, 0],
+	income: [1, 5, 13, 30],
+	cost: [15, 50, 150, 250],
 
 
 	purchase: function(index) {
