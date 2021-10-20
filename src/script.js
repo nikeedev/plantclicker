@@ -28,11 +28,11 @@ var game = {
 
 
 var building = {
-	name: ["Cursor", "Fertilizer", "Gardener", "Farm"],
-	image: ["src/big_cursor.png", "src/big_fertilizer.png", "src/big_gardener.png", "src/big_farm.png"],
-	count: [0, 0, 0, 0],
-	income: [1, 5, 13, 30],
-	cost: [15, 50, 150, 250],
+	name: ["Cursor", "Fertilizer", "Gardener", "Farm", "Mega Farm", "Forest", ],
+	image: ["src/assets/big_cursor.png", "src/assets/big_fertilizer.png", "src/assets/big_gardener.png", "src/assets/big_farm.png", "src/assets/big_mega_farm.png", "src/assets/big_forest.png"],
+	count: [0, 0, 0, 0, 0, 0],
+	income: [1, 5, 13, 30, 100, 500],
+	cost: [15, 50, 150, 250, 500, 1000],
 
 
 	purchase: function(index) {
