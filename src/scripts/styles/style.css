@@ -101,5 +101,15 @@ html {
     font-family: 'Atkinson Hyperlegible';
 }
 
+.unselcetable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
+#upgradeContainer {
+    height: 64px;
+    width: 64px;
+}
 
