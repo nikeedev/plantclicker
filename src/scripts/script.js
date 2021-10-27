@@ -32,7 +32,7 @@ var building = {
 	image: ["src/assets/big_cursor.png", "src/assets/big_fertilizer.png", "src/assets/big_gardener.png", "src/assets/big_farm.png", "src/assets/big_mega_farm.png", "src/assets/big_forest.png"],
 	count: [0, 0, 0, 0, 0, 0],
 	income: [5, 25, 50, 100, 375, 500],
-	cost: [50, 150, 250, 500, 750, 1250],
+	cost: [50, 150, 500, 1000, 5000, 10000],
 
 
 	purchase: function(index) {
