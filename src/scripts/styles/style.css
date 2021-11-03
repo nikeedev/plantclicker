@@ -108,7 +108,7 @@ html {
     user-select: none;
 }
 
-#upgradeContainer {
+#upgradeContainer img {
     height: 64px;
     width: 64px;
 }

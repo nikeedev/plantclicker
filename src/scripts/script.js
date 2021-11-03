@@ -46,7 +46,44 @@ var building = {
 	}
 };
 
+var upgrade = {
+	name: [
+		"Gold Fingers"
+	],
+	description: [
+		"Cursors are now twice as fast!"
+	],
+	image: [
+		"src/assets/big_gold_cursor.png"
+	],
+	type: [
+		"building"
+	],
+	cost: [
+		500
+	],
+	buildingIndex: [
+		0
+	],
+	requirement: [
+		1,
+	],
+	bonus: [
+		2
+	],
+	purchased: [
+		false
+	],
+	purchase: (index) => {
+		if (!this.purchased[index] && game.plants >= this.cost[index]) {
+			if (this.type[index] == "building" && building.count[this.buildingIndex[index]] >= this.requirement[index]) {
+				
+			} else if (this.type[index]) {
 
+			}
+		}
+	},
+};
 
 var display = {
 	updatePlants: function() {
