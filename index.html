@@ -9,38 +9,40 @@
 <body>
 	<div class="sectionLeft">
 		<center>
-			<div class="scoreContainer unselcetable">
-				<strong><span id="plants">0</span></strong> <span id="zeros">plants</span> <br>
+			<div class="plantsContainer unselcetable">
+				<strong><span title="" id="plants">0</span></strong> <span id="zeros">plants</span> <br>
 				<strong><span id="plantsPerSecond">0</span></strong> <span id="zeros">plants per second. </span>
 			</div>
 			<br>
 			<div class="clickerContainer unselcetable">
-				<img src="src/assets/plant.png" id="btn" onclick="game.addToPlants(game.clickValue)">
+				<img src="src/assets/plant.png" id="clicker">
 			</div>
 			
 		</center>
 	</div>
 	
 	<div class="sectionRight">
+		<p id="right">Upgrades:</p>
 		<div id="upgradeContainer"></div>
+		<p id="right">Shop:</p>
 		<div id="shopContainer"></div>
 
 	</div>
 
 
 	
-	<p id="version">Version 0.3.3-2 <br><br><button onclick="resetGame()">Delete progress(Will not ask you again to confirm!)</button></p>
+	<p id="version">Version 0.4.0 <br><br><button onclick="resetGame()">Delete progress(Will not ask you again to confirm!)</button></p>
 	
 	
-	<p id="news">News: In version 0.3.3 You have now a new item to buy: The Mega Farm and The Forest(that one is expensive!)</p>
+	<p id="news">News: In version 0.4.0 You have now Upgrades! Many cursor upgrades, but it will be soon even more others than cursors!</p><p id="news"><br> Hope you enjoy with newest features and the game itself! Cheers, Nikita.</p>
 
 
 	
 
-
+	<script src="src/scripts/script.js"></script>
 </body>
 <link rel="stylesheet" href="src/scripts/styles/style.css">
 <link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible' rel='stylesheet'>
-<script src="src/scripts/script.js"></script>
+
 </html>
 

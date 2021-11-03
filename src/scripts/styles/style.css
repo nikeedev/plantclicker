@@ -31,7 +31,7 @@ html {
     width: 20%;
 }
 
-.scoreContainer {
+.plantsContainer {
     background-color: rgb(27, 160, 28);
     color: rgb(100, 253, 100);
     width: 50%;
@@ -113,3 +113,12 @@ html {
     width: 64px;
 }
 
+#right {
+    font-family: 'Atkinson Hyperlegible';
+    font-size: 15px;
+    background-color: rgb(27, 160, 28);
+    color: rgb(100, 253, 100);
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+}

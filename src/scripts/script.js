@@ -3,7 +3,7 @@ var game = {
 	totalPlants: 0,
 	totalClicks: 0,
 	clickValue: 1,
-	version: 0.000,
+	version: 0.001,
 
 
 	addToPlants: function(amount) {
@@ -42,60 +42,93 @@ var building = {
 			this.cost[index] = Math.ceil(this.cost[index] * 1.10);
 			display.updatePlants();
 			display.updateShop();
+			display.updateUpgrades();
 		}
 	}
 };
 
 var upgrade = {
 	name: [
-		"Gold Fingers"
+		"Gold Cursors",
+		"Shiny Gold Cursors"
 	],
 	description: [
-		"Cursors are now twice as fast!"
+		"Cursors are now twice as fast!",
+		'4x Better and shinier than Gold Cursors'
 	],
 	image: [
-		"src/assets/big_gold_cursor.png"
+		"big_gold_cursor.png",
+		"big_gold_cursor.png"
 	],
 	type: [
+		"building",
 		"building"
 	],
 	cost: [
-		500
+		300,
+		520
 	],
 	buildingIndex: [
+		0,
 		0
 	],
 	requirement: [
-		1,
+		5,
+		10
 	],
 	bonus: [
-		2
+		2,
+		4
 	],
 	purchased: [
+		false, 
 		false
 	],
-	purchase: (index) => {
+	purchase: function(index) {
 		if (!this.purchased[index] && game.plants >= this.cost[index]) {
 			if (this.type[index] == "building" && building.count[this.buildingIndex[index]] >= this.requirement[index]) {
-				
-			} else if (this.type[index]) {
-
+				game.plants -= this.cost[index];
+				building.income[this.buildingIndex[index]] *= this.bonus[index];
+				this.purchased[index] = true;
+				 
+				display.updateUpgrades();
+				display.updatePlants();
+			} else if (this.type[index] == "click" && game.totalClicks >= this.requirement[index]) {
+				game.plants -= this.cost[index];
+				game.clickValue *= this.bonus[index];
+				this.purchased[index] = true;
+				 
+				display.updateUpgrades();
+				display.updatePlants();
 			}
 		}
 	},
 };
 
 var display = {
-	updatePlants: function() {
+	updatePlants: () => {
 		document.getElementById("plants").innerHTML = game.plants;
 		document.getElementById("plantsPerSecond").innerHTML = game.getPlantsPerSecond();
 		document.title = game.plants + " plants - Plant Clicker"; 
 	},
 
-	updateShop: function() {
+	updateShop: () => {
 		document.getElementById("shopContainer").innerHTML = "";
 		for (i = 0; i < building.name.length; i++) {
 			document.getElementById("shopContainer").innerHTML += '<table class="shopButton" onclick="building.purchase('+i+')"><tr><td id="image"><img src="'+building.image[i]+'"></td><td id="nameAndCost"><p id="zeros">'+building.name[i]+'</p><p>'+building.cost[i]+'<span id="zeros"> plants</span></p></td><td id="amount"><span>'+building.count[i]+'</span></td></tr></table>'
+		}
+	},
+
+	updateUpgrades: () => {
+		document.getElementById("upgradeContainer").innerHTML = "<p id='right'>No Upgrades available yet!</p>";
+		for(i = 0; i < upgrade.name.length; i++) {
+			if(!upgrade.purchased[i]) {
+				if(upgrade.type[i] == "building" && building.count[upgrade.buildingIndex[i]] >= upgrade.requirement[i]) {
+					document.getElementById("upgradeContainer").innerHTML += '<img src="src/assets/'+upgrade.image[i]+'" title="'+upgrade.name[i]+' &#10; '+upgrade.description[i]+' &#10; ('+upgrade.cost[i]+' plants)" onclick="upgrade.purchase('+i+')">';
+				} else if (upgrade.type[i] == "click" && game.totalClicks >= upgrade.requirement[i]) {
+					document.getElementById("upgradeContainer").innerHTML += '<img src="src/assets/'+upgrade.image[i]+'" title="'+upgrade.name[i]+' &#10; '+upgrade.description[i]+' &#10; ('+upgrade.cost[i]+' plants)" onclick="upgrade.purchase('+i+')">';
+				}
+			}
 		}
 	}
 };
@@ -108,7 +141,9 @@ function saveGame() {
 		clickValue: game.clickValue,
 		buildingCount: building.count,
 		buildingIncome: building.income,
-		buildingCost: building.cost
+		buildingCost: building.cost,
+		upgradePurchased: upgrade.purchased,
+
 
 	};
 	localStorage.setItem("gameSave", JSON.stringify(gameSave));
@@ -145,6 +180,11 @@ function loadGame() {
 				building.income[i] = savedGame.buildingIncome[i];
 			}
 		}
+		if (typeof savedGame.upgradePurchased !== "undefined") {
+			for (i = 0; i < savedGame.upgradePurchased.length; i++) {
+				upgrade.purchased[i] = savedGame.upgradePurchased[i];
+			}
+		}
 	}
 }
 
@@ -155,22 +195,30 @@ function resetGame() {
 	
 }
 
+document.getElementById("clicker").addEventListener("click", function() {
+	game.totalClicks++;
+	game.addToPlants(game.clickValue);
+}, false);
 
 window.onload = function() {
 	loadGame();
 	display.updatePlants();
+	display.updateUpgrades();
 	display.updateShop();
 }
-
-
-setInterval(function() {
-	saveGame();
-}, 500);
-
 
 setInterval(() => {
 	game.plants += game.getPlantsPerSecond();
 	game.totalPlants += game.getPlantsPerSecond();
 	display.updatePlants();
 }, 1000);
+
+setInterval(function() {
+	saveGame();
+}, 500);
+
+setInterval(() => {
+	display.updatePlants();
+	display.updateUpgrades();
+}, 10000)
 
