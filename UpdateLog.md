@@ -12,4 +12,6 @@
 
 **Update 0.4.0(03.11.2021): Added _finally_ Upgrades! It will be two new cursor upgrades, but as soon as i get to work with more sprites, more upgrades will be available! Hope you enjoy with newest features and the game itself. Cheers, Nikita!**
 
+**Update 0.4.1(04.11.2021): Added even more upgrades, I will not take the surprise away from you guys.**
+
 ***More updates will be later added, remember that i don't have always time to make them. Use [Discuissions](https://github.com/nikeedev/plantclicker/discussions) to give ideas to the game***

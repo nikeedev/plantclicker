@@ -50,38 +50,57 @@ var building = {
 var upgrade = {
 	name: [
 		"Gold Cursors",
-		"Shiny Gold Cursors"
+		"Shiny Gold Cursors",
+		"Clicker+",
+		"Clicker++"
 	],
 	description: [
 		"Cursors are now twice as fast!",
-		'4x Better and shinier than Gold Cursors'
+		"4x Better and shinier than Gold Cursors",
+		"Your Clicks will be doubled!",
+		"This bad boy, gives your clicks 4x more than previous!"
 	],
 	image: [
 		"big_gold_cursor.png",
-		"big_gold_cursor.png"
+		"big_gold_cursor.png",
+		"big_strong_cursor.png",
+		"big_strong_cursor.png"
 	],
 	type: [
 		"building",
-		"building"
+		"building",
+		"click",
+		"click"
 	],
 	cost: [
 		300,
-		520
+		520,
+		700,
+		1000
 	],
 	buildingIndex: [
+		0,
+		0,
 		0,
 		0
 	],
 	requirement: [
 		5,
-		10
+		10,
+		50,
+		80,
+
 	],
 	bonus: [
+		2,
+		4,
 		2,
 		4
 	],
 	purchased: [
 		false, 
+		false,
+		false,
 		false
 	],
 	purchase: function(index) {
