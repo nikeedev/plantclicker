@@ -52,53 +52,88 @@ var upgrade = {
 		"Gold Cursors",
 		"Shiny Gold Cursors",
 		"Clicker+",
-		"Clicker++"
+		"Clicker++",
+		"Golden Farm",
+		"Golden Farm GOLDIER",
+		"Mega Golden Farm"
 	],
 	description: [
 		"Cursors are now twice as fast!",
 		"4x Better and shinier than Gold Cursors",
 		"Your Clicks will be doubled!",
-		"This bad boy, gives your clicks 4x more than previous!"
+		"This bad boy, gives your clicks 4x more than previous!",
+		"Turn all your plants into GOLD!",
+		"Farms are now 6x goldier than before!",
+		"MY GOD, THATS POWERFUL!",
+		"MY GOD, THATS EVEN MORE POWERFUL!!!!"
 	],
 	image: [
 		"big_gold_cursor.png",
 		"big_gold_cursor.png",
 		"big_strong_cursor.png",
-		"big_strong_cursor.png"
+		"big_strong_cursor.png",
+		"big_gold_farm.png",
+		"big_gold_farm.png",
+		"big_gold_mega_farm.png",
+		"big_gold_mega_farm.png"
 	],
 	type: [
 		"building",
 		"building",
 		"click",
-		"click"
+		"click",
+		"building",
+		"building",
+		"building",
+		"building"
 	],
 	cost: [
 		300,
 		520,
 		700,
-		1000
+		1000,
+		50000,
+		1000000,
+		10000000,
+		15000000,
 	],
 	buildingIndex: [
 		0,
 		0,
 		0,
-		0
+		0,
+		3,
+		3,
+		4,
+		4
 	],
 	requirement: [
-		5,
-		10,
+		30,
+		45,
+		150,
+		225,
 		50,
-		80,
+		125,
+		150,
+		250,
 
 	],
 	bonus: [
 		2,
 		4,
 		2,
-		4
+		4,
+		3.4,
+		6.5,
+		15,
+		22
 	],
 	purchased: [
 		false, 
+		false,
+		false,
+		false,
+		false,
 		false,
 		false,
 		false

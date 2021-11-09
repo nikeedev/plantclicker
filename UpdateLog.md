@@ -14,4 +14,6 @@
 
 **Update 0.4.1(04.11.2021): Added even more upgrades, I will not take the surprise away from you guys.**
 
+**Update 0.4.4(09.11.2021): Added even more upgrades. Update before, i had cursors and click upgrades, this time/update i have brought upgrades for farms and mega farms! You will understand which is which upgrade by pointing mouse on the picture of the upgrade.**
+
 ***More updates will be later added, remember that i don't have always time to make them. Use [Discuissions](https://github.com/nikeedev/plantclicker/discussions) to give ideas to the game***
