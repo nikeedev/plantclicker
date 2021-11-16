@@ -55,7 +55,9 @@ var upgrade = {
 		"Clicker++",
 		"Golden Farm",
 		"Golden Farm GOLDIER",
-		"Mega Golden Farm"
+		"Mega Golden Farm",
+		"Watery Fertillizers",
+		"Shiny Watery Fertilizers"
 	],
 	description: [
 		"Cursors are now twice as fast!",
@@ -65,7 +67,9 @@ var upgrade = {
 		"Turn all your plants into GOLD!",
 		"Farms are now 6x goldier than before!",
 		"MY GOD, THATS POWERFUL!",
-		"MY GOD, THATS EVEN MORE POWERFUL!!!!"
+		"MY GOD, THATS EVEN MORE POWERFUL!!!!",
+		"Water filled fertilizers",
+		"Shiny plants!!!!"
 	],
 	image: [
 		"big_gold_cursor.png",
@@ -75,13 +79,17 @@ var upgrade = {
 		"big_gold_farm.png",
 		"big_gold_farm.png",
 		"big_gold_mega_farm.png",
-		"big_gold_mega_farm.png"
+		"big_gold_mega_farm.png",
+		"big_watery_fertilizer.png",
+		"big_shiny_watery_fertilizer.png"
 	],
 	type: [
 		"building",
 		"building",
 		"click",
 		"click",
+		"building",
+		"building",
 		"building",
 		"building",
 		"building",
@@ -96,6 +104,8 @@ var upgrade = {
 		1000000,
 		10000000,
 		15000000,
+		1000,
+		50000,
 	],
 	buildingIndex: [
 		0,
@@ -105,7 +115,9 @@ var upgrade = {
 		3,
 		3,
 		4,
-		4
+		4,
+		1,
+		1
 	],
 	requirement: [
 		30,
@@ -116,6 +128,8 @@ var upgrade = {
 		125,
 		150,
 		250,
+		50,
+		100
 
 	],
 	bonus: [
@@ -126,10 +140,14 @@ var upgrade = {
 		3.4,
 		6.5,
 		15,
-		22
+		22,
+		6,
+		12
 	],
 	purchased: [
 		false, 
+		false,
+		false,
 		false,
 		false,
 		false,

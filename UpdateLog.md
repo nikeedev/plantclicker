@@ -16,6 +16,8 @@
 
 **Update 0.4.4(09.11.2021): Added even more upgrades. Update before, i had cursors and click upgrades, this time/update i have brought upgrades for farms and mega farms! You will understand which is which upgrade by pointing mouse on the picture of the upgrade.**
 
+**Update 0.4.6(16.11.2021): Added more fertilizer upgrades.**
+
 **Hope you enjoy with newest features and the game itself. Cheers, Nikita!**
 
 
