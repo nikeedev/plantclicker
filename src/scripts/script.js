@@ -192,7 +192,6 @@ var display = {
 	},
 
 	updateUpgrades: () => {
-		document.getElementById("upgradeContainer").innerHTML = "<p id='right'>No Upgrades available yet!</p>";
 		for(i = 0; i < upgrade.name.length; i++) {
 			if(!upgrade.purchased[i]) {
 				if(upgrade.type[i] == "building" && building.count[upgrade.buildingIndex[i]] >= upgrade.requirement[i]) {
@@ -201,6 +200,9 @@ var display = {
 					document.getElementById("upgradeContainer").innerHTML += '<img src="src/assets/'+upgrade.image[i]+'" title="'+upgrade.name[i]+' &#10; '+upgrade.description[i]+' &#10; ('+upgrade.cost[i]+' plants)" onclick="upgrade.purchase('+i+')">';
 				}
 			}
+                        else {
+                                document.getElementById("upgradeContainer").innerHTML = "<p id='right'>No Upgrades available yet!</p>";
+                        }
 		}
 	}
 };
