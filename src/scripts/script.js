@@ -177,6 +177,49 @@ var upgrade = {
 	},
 };
 
+var achievement = {
+	name: [
+		"Stone Fingers",
+		"A Humble Start",
+		"Fingertastic",
+	],
+	description :[
+		"Buy 1 Cursor",
+		"Gather 1 plant",
+		"Click the plant 1 time"
+	],
+	image: [
+		"big_strong_cursor.png",
+		"plant.png",
+		"big_forest.png"
+
+	],
+	type: [
+		"building",
+		"score",
+		"click"
+	],
+	requirement: [
+		1,
+		1,
+		1
+	],
+	objectIndex: [
+		0,
+		-1,
+		-1 
+	],
+	awarded: [
+		false,
+		false,
+		false
+	],
+	earn: function(index) {
+		this.awarded[index] = true;
+
+	}
+}
+
 var display = {
 	updatePlants: () => {
 		document.getElementById("plants").innerHTML = game.plants;
@@ -204,6 +247,15 @@ var display = {
                 document.getElementById("upgradeContainer").innerHTML = "<p id='right'>No Upgrades available yet!</p>";
             }
 		}
+	},
+
+	updateAchievements: function() {
+		document.getElementById("achievementContainer").innerHTML = "";
+		for (i = 0; i < achievement.name.length; i++) {
+			if (achievement.awarded[i]) {
+				document.getElementById("achievementContainer").innerHTML += '<img src="src/assets/'+achievement.image[i]+'" title="'+achievement.name[i]+' &#10; '+achievement.description[i]+'">';
+			}	
+		}
 	}
 };
 
@@ -217,7 +269,7 @@ function saveGame() {
 		buildingIncome: building.income,
 		buildingCost: building.cost,
 		upgradePurchased: upgrade.purchased,
-
+		achievementAwarded: achievement.awarded
 
 	};
 	localStorage.setItem("gameSave", JSON.stringify(gameSave));
@@ -259,6 +311,11 @@ function loadGame() {
 				upgrade.purchased[i] = savedGame.upgradePurchased[i];
 			}
 		}
+		if (typeof savedGame.achievementAwarded !== "undefined") {
+			for (i = 0; i < savedGame.achievementAwarded.length; i++) {
+				achievement.awarded[i] = savedGame.achievementAwarded[i];
+			}
+		}
 	}
 }
 
@@ -278,13 +335,20 @@ window.onload = function() {
 	loadGame();
 	display.updatePlants();
 	display.updateUpgrades();
+	display.updateAchievements();
 	display.updateShop();
 }
 
 setInterval(() => {
+	for(i=0; i < achievement.name.length; i++) {
+		if (achievement.type[i] == "score" && game.totalPlants >= achievement.requirement[i]) achievement.earn(i);
+		else if (achievement.type[i] == "click" && game.totalClicks >= achievement.requirement[i]) achievement.earn(i);
+		else if (achievement.type[i] == "building" && building.count[achievement.objectIndex[i]] >= achievement.requirement[i]) achievement.earn(i);
+	}
 	game.plants += game.getPlantsPerSecond();
 	game.totalPlants += game.getPlantsPerSecond();
 	display.updatePlants();
+	display.updateAchievements();
 }, 1000);
 
 setInterval(function() {

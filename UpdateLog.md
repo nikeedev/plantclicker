@@ -20,6 +20,8 @@
 
 **Update 0.4.6-1a(22.11.2021): Fixed a [bug](https://github.com/nikeedev/plantclicker/issues/5)**
 
+**Update 0.5.0(08.01.2022): Added finally achievements!!!! Next will be soon the version 1.0, so get ready!!!!**
+
 **Hope you enjoy with newest features and the game itself. Cheers, Nikita!**
 
 

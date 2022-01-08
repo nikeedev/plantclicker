@@ -113,12 +113,19 @@ html {
     width: 64px;
 }
 
+#achievementContainer img {
+    height: 64px;
+    width: 64px;
+    background-color: rgb(62, 185, 62);
+}
+
 #right {
     font-family: 'Atkinson Hyperlegible';
     font-size: 15px;
     background-color: rgb(27, 160, 28);
     color: rgb(100, 253, 100);
-    width: 50%;
+    width: 70%;
     padding: 10px;
+    margin: auto;
     border-radius: 10px;
 }
